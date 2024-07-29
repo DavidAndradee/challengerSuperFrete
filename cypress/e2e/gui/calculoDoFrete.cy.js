@@ -1,14 +1,6 @@
 describe('Cálculo do SuperFrete', () => {
     before(() => {
-        // Limpar cookies e armazenamento local
-        cy.clearCookies();
-        cy.clearLocalStorage();
-
-        cy.viewport(1366, 768); // resolução da tela
-
-        // Acessar a URL e aguardar 10 segundos
-        cy.visit('/');
-        cy.wait(10000);
+        cy.clearAjust();
     });
 
     it('Validação do fluxo principal de cálculo do SuperFrete', () => {
