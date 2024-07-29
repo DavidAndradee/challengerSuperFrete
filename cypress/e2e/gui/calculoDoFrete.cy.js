@@ -15,16 +15,8 @@ describe('Cálculo do SuperFrete', () => {
         // preenchimento do formulário
         cy.get('#originPostcode').type('08090-284');
 
-        cy.get('#object_format').click();
-        cy.get('.Mui-selected').click();
-
-        cy.get('#weight').click();
-        cy.get('[data-value="0.3"]').click();
-
-        cy.get('#packageHeight').type('2');
-        cy.get('#packageWidth').type('11');
-        cy.get('#packageDepth').type('16');
-
+        cy.preencher('2','11','16');
+        
         cy.get('#destinationPostcode').type('05407-002');
 
         cy.get('[data-cy="calculator-submit"]').contains('CALCULAR FRETE COM DESCONTO').click();

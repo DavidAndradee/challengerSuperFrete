@@ -14,15 +14,7 @@ describe('SuperFrete', () => {
     it('Validar mensagens de erro para dimensões inválidas', () => {
         cy.get('#originPostcode').type('08090-284');
 
-        cy.get('#object_format').click();
-        cy.get('.Mui-selected').click();
-
-        cy.get('#weight').click();
-        cy.get('[data-value="0.3"]').click();
-
-        cy.get('#packageHeight').type('0.3');
-        cy.get('#packageWidth').type('7');
-        cy.get('#packageDepth').type('10');
+        cy.preencher('0.3', '7', '10')
 
         cy.get('#destinationPostcode').type('05407-002');
 
