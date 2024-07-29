@@ -16,18 +16,18 @@ Antes de começar, certifique-se de que você possui as seguintes ferramentas in
 
    Primeiro, clone o repositório do projeto:
 
-   ```terminal
+   ``terminal
    git clone <URL_DO_REPOSITORIO>
    cd <NOME_DO_REPOSITORIO>
-   ```
+   ``
 
 2. **Instale as dependências**
 
    Execute o comando a seguir para instalar as dependências do projeto:
 
-   ```terminal
+   ``terminal
    npm install
-   ```
+   ``
 
 ## Configuração
 
