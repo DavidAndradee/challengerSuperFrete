@@ -16,33 +16,33 @@ Antes de começar, certifique-se de que você possui as seguintes ferramentas in
 
    Primeiro, clone o repositório do projeto:
 
-   ``terminal
+   ```terminal
    git clone <URL_DO_REPOSITORIO>
    cd <NOME_DO_REPOSITORIO>
-   ``
+   ```
 
 2. **Instale as dependências**
 
    Execute o comando a seguir para instalar as dependências do projeto:
 
-   ``terminal
+   ```terminal
    npm install
-   ``
+   ```
 
 ## Configuração
 
 1. **Configuração do Cypress**
 
-   Certifique-se de que o arquivo de configuração do Cypress (`cypress.config.js`) está configurado corretamente com o `pageLoadTimeout` aumentado e o `baseUrl` definido:
+   Certifique que o arquivo de configuração do Cypress (`cypress.config.js`) está configurado corretamente com o `pageLoadTimeout` aumentado e o `baseUrl` definido com descrito abaixo:
 
    ```cypress.config.js
    module.exports = {
-     pageLoadTimeout: 120000, // tempo em milissegundos (2 minutos)
+     pageLoadTimeout: 120000,
      e2e: {
        setupNodeEvents(on, config) {
-         // implementar funções de eventos aqui, se necessário
        },
        baseUrl: 'https://web.superfrete.com',
+       defaultCommandTimeout: 10000,
      }
    }
    ```
